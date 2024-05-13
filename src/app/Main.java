@@ -7,12 +7,19 @@ public class Main {
     public static void main(String[] args) {
 
             System.out.println("App for distance converting. ");
-            System.out.println("Version 1.0.");
+            System.out.println("Version 2.0.");
             double miles = 5;
-            double kms = convMilesToKolometers(miles);
+            double klm = 100;
+            double kms =  convMilesToKilometers(miles);
+            double mles = convKilometersToMiles(klm);
             System.out.println("Result is " + kms + " km.");
+            System.out.println("Result is " + mles + " miles.");
         }
-        private static double convMilesToKolometers(double miles) {
+        private static double convMilesToKilometers(double miles) {
             return miles / CONV_M;
         }
+
+    private static double convKilometersToMiles(double kilometers) {
+        return kilometers * CONV_M;
+    }
     }
